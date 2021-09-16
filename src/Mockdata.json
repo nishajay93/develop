@@ -1,0 +1,55 @@
+{
+    "legalNoticeData":[
+    {
+    "id":1,
+    "orderId":"1",
+    "legalNoticeName":"Important Information",
+    "pageTitle1":"important",
+    "pageTitle2":"Info",
+    "externalLink":"false",
+    "external url":"",
+    "portalsData":{
+    "brokerData":"Broker",
+    "employeeData":"Employee",
+    "employerData":"Employer",
+    "brokerPortalSelected":true,
+    "employeePortalSelected":true,
+    "employerPortalSelected":true}
+    ,
+    "loginType":{"type1":"Authenticated",
+    "type2":"Non-Authenticated",
+    "Authenticated":true,
+    "NonAuthenticated":false
+    },
+    "pageContent":"sdjfhiwewybrbvr",
+    "isActive":true
+    },
+    {
+    "id":2,
+    "orderId":"2",
+    "legalNoticeName":"Terms of use",
+    "pageTitle1":"Important",
+    "pageTitle2":"Info",
+    "externalLink":"false",
+    "external url":"",
+    "portalsData":{
+    "brokerData":"Broker",
+    "employeeData":"Employee",
+    "employerData":"Employer",
+    "brokerPortalSelected":true,
+    "employeePortalSelected":false,
+    "employerPortalSelected":true}
+    ,
+    "loginType":{"type1":"Authenticated",
+    "type2":"Non-Authenticated",
+    "Authenticated":true,
+    "NonAuthenticated":true
+    },
+    "pageContent":"sdjfhiwewybrbvr",
+    "isActive":false
+    }
+]
+}
+    
+    
+    
