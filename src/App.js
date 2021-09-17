@@ -26,6 +26,21 @@ const useStyles = makeStyles({
   },
 });
 
+const portalsDataConstructor = ( portalData ) => {
+  const result = [];
+  const portalMap = {
+    brokerPortalSelected : 'brokerData',
+    employeePortalSelected : 'employeeData',
+    employerPortalSelected : 'employerData'
+  }
+  Object.keys(portalMap).forEach((status)=>{
+    if(portalData[status]){
+      const data = portalMap[status];
+      result.push(portalData[data])
+    }
+  })
+  return result.join(',')
+}
 
 export default function BasicTable() {
   const classes = useStyles();
@@ -64,9 +79,10 @@ export default function BasicTable() {
                 {d.legalNoticeName}
               </TableCell>
               <TableCell align="left">
-                  {d.portalsData.brokerPortalSelected && d.portalsData.employeePortalSelected &&
-                  d.portalsData.employerPortalSelected ? Object.values(d.portalsData).join(",") : null
-                  }</TableCell>
+                {
+                  portalsDataConstructor(d.portalsData)
+                }
+                </TableCell>
               <TableCell align="left">{d.loginType.Authenticated 
               && d.loginType.NonAuthenticated? Object.values(d.loginType).join(","): null}</TableCell>
               <TableCell align="left">{d.pageContent.isActive?"YES":"NO"}</TableCell>
@@ -79,7 +95,7 @@ export default function BasicTable() {
     <AccordionActions>
         <Button>
             <AddCircleOutlineIcon/>add new item
-        </Button>
+        </Button>stastatable.
     </AccordionActions>
     </Accordion>
   );
